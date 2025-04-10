@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-display: swap;
+    src: url('fonts/Inter.ttf');
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter';
+}
+
+.intro {
+    height: 100vh;
+    width: 100%;
+}
+
+.intro > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.70);
+}
