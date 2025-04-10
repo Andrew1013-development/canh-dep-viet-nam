@@ -1,3 +1,4 @@
+/* custom fonts */
 @font-face {
     font-family: 'Inter';
     font-style: normal;
@@ -7,20 +8,51 @@
     src: url('fonts/Inter.ttf');
 }
 
-body {
-    margin: 0;
-    font-family: 'Inter';
+@font-face {
+    font-family: 'Bungee';
+    font-weight: 400;
+    src: url("fonts/Bungee.ttf");
 }
 
+body {
+    margin: 0px;
+    font-family: 'Bungee';
+}
+
+/* fullscreen banner on homepage */
 .intro {
     height: 100vh;
     width: 100%;
+    background-image: 
+        linear-gradient(rgb(0,0,0,0.4),rgb(0,0,0,0.4)), /* darkening */
+        url("images/intro.webp");
+    background-size: cover;
+    position: relative;
 }
-
-.intro > img {
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
     width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    filter: brightness(0.70);
+}
+.element {
+    flex-grow: 1;
+    transition: flex-grow 0.25s ease-in-out;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+}
+.element:hover {
+    flex-grow: 3;
 }
