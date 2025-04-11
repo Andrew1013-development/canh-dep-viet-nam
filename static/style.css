@@ -123,8 +123,14 @@ button {
 }
 .banner#cuisine { background-image: var(--darkening), url("images/cuisine/banner.jpg"); }
 .banner#cul-arc { background-image: var(--darkening), url("images/cul-arc/"); }
-.banner#geo-his { background-image: var(--darkening), url("images/geo-his/"); }
-.banner#experience { background-image: var(--darkening), url("images/experience/"); }
+.banner#geo-his { 
+    background-image: var(--darkening), url("images/geo-his/banner.jpg"); 
+    background-position: 50% 35%;
+}
+.banner#experience { 
+    background-image: var(--darkening), url("images/experience/banner.jpg"); 
+    background-position: 50% 60%;
+}
 .banner#credits { background-image: var(--darkening), url("images/credits/"); }
 .title {
     position: absolute;
@@ -202,6 +208,47 @@ button {
 .carousel-explainers .element .page p {
     flex-grow: 1;
     margin: 0;
+}
+/* history timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+}
+.timeline .line {
+    width: 5px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.timeline .event {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.timeline .event .trigger {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: grey;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.timeline .event .card {
+    opacity: 0.0;
+}
+.timeline .event .card.active {
+    opacity: 1.0;
 }
 /* general page */
 .page {

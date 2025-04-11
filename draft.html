@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Timeline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the start (left in LTR) */
+            margin-top: 2rem;
+            position: relative;
+        }
+        .timeline-line {
+            width: 4px;
+            background-color: #9ca3af;
+            height: 100%;
+            position: absolute;
+            left: 30px; /* Position the line */
+            top: 0;
+        }
+        .timeline-event {
+            display: flex;
+            flex-direction: row; /* Changed to row */
+            justify-content: flex-start; /* Align items to the start */
+            width: 100%;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 80px; /* Add padding to the left for circles and line */
+            align-items: flex-start; /* Align items to the start */
+        }
+        .timeline-event:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-circle {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #6b7280;
+            cursor: pointer;
+            position: absolute;
+            left: 30px; /* Position circles */
+            top: 0;
+            transform: translateY(0%);
+            z-index: 2;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            margin-top: 0.5rem;
+        }
+
+        .timeline-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-top: 1rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, max-height 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            width: 60%; /* Make cards take up more space */
+            margin-left: auto; /* Push cards to the right */
+            text-align: left;
+        }
+        .timeline-card.active {
+            opacity: 1;
+            visibility: visible;
+            max-height: 500px;
+        }
+
+        .timeline-event.active .timeline-line::after {
+            content: '';
+            position: absolute;
+            left: 32px;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: white;
+            z-index: 0;
+        }
+
+        /* CSS Downwards Pointer */
+        .timeline-circle::after{
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 10px solid #6b7280;
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-event">
+            <div class="timeline-circle" data-target="event1"></div>
+            <div class="timeline-card" id="event1">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Ancient Civilizations</h3>
+                <p class="text-gray-700">
+                    The earliest known civilizations emerged in Mesopotamia and Egypt around 3500 BCE.  These societies developed writing, agriculture, and complex social structures.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <div class="timeline-circle" data-target="event2"></div>
+            <div class="timeline-card" id="event2">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Classical Antiquity</h3>
+                <p class="text-gray-700">
+                    The Greek and Roman civilizations flourished, making significant contributions to philosophy, democracy, law, and art. The Roman Empire dominated the Mediterranean world for centuries.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <div class="timeline-circle" data-target="event3"></div>
+            <div class="timeline-card" id="event3">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Middle Ages</h3>
+                <p class="text-gray-700">
+                   In Europe, the Roman Empire fell, leading to a period of feudalism and the rise of Christianity.  In Asia, powerful empires like the Tang Dynasty in China and the Islamic Caliphates emerged.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <div class="timeline-circle" data-target="event4"></div>
+            <div class="timeline-card" id="event4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Renaissance</h3>
+                <p class="text-gray-700">
+                   A period of renewed interest in art, literature, and science began in Europe, leading to major advancements and the exploration of the New World.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <div class="timeline-circle" data-target="event5"></div>
+            <div class="timeline-card" id="event5">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Industrial Revolution</h3>
+                <p class="text-gray-700">
+                    The invention of new machines and technologies transformed societies from agrarian to industrial, leading to significant economic and social changes.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <div class="timeline-circle" data-target="event6"></div>
+            <div class="timeline-card" id="event6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">20th Century</h3>
+                <p class="text-gray-700">
+                    Marked by two world wars, the rise of new ideologies, the Cold War, and rapid technological advancements, including the development of nuclear weapons and space exploration.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       const timelineCircles = document.querySelectorAll('.timeline-circle');
+        const timelineLine = document.querySelector('.timeline-line');
+        let activeCard = null;
+
+        timelineCircles.forEach(circle => {
+            circle.addEventListener('click', () => {
+                const targetId = circle.getAttribute('data-target');
+                const targetCard = document.getElementById(targetId);
+
+                if (activeCard) {
+                    activeCard.classList.remove('active');
+                }
+
+                targetCard.classList.add('active');
+                activeCard = targetCard;
+
+                // Adjust timeline height
+                adjustTimelineHeight();
+            });
+        });
+
+       function adjustTimelineHeight() {
+            let maxHeight = 0;
+            const activeCards = document.querySelectorAll('.timeline-card.active');
+            activeCards.forEach(card => {
+                maxHeight = Math.max(maxHeight, card.offsetHeight);
+            });
+
+            // Set a minimum height
+            const minHeight = 200;
+            timelineLine.style.height = Math.max(minHeight, maxHeight) + 'px';
+        }
+    </script>
+</body>
+</html>
