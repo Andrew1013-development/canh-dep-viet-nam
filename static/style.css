@@ -4,7 +4,7 @@
     --secondary-color: rgb(140,111,35);
     --tertiary: rgb(191,105,137);
     --background-color: rgb(233,239,242);
-    --darkening: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3));
+    --darkening: linear-gradient(rgb(0,0,0,0.35),rgb(0,0,0,0.35));
 }
 
 /* custom fonts */
@@ -16,24 +16,18 @@
     font-display: swap;
     src: url('fonts/Inter.ttf');
 }
-@font-face {
-    font-family: 'Bungee';
-    font-weight: 400;
-    font-display: swap;
-    src: url("fonts/Bungee.ttf");
-}
 
 /* general styles */
 body {
     margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    font-family: 'Bungee';
+    font-family: 'Inter';
     background-color: var(--background-color);
     overflow-x: hidden; /* hide horizontal scrollbar */
 }
 button {
     color: white;
-    font-family: 'Bungee';
     padding: 10px 7px; /* top bottom | left right */
     border: 1px solid white;
     border-radius: 5px;
@@ -66,14 +60,35 @@ button {
     text-align: center;
     color: white;
 }
-.bar {
+.top-bar {
+    position: absolute;
+    margin-top: 5px;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+}
+.top-bar .left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+.top-bar .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.top-bar * {
+    margin: 0px 5px;
+}
+.bottom-bar {
     position: absolute;
     bottom: 0;
     left: 0;
     display: flex;
     width: 100%;
 }
-.bar .element {
+.bottom-bar .element {
     flex-grow: 1;
     transition: flex-grow 0.25s ease-in-out;
     color: white;
@@ -82,7 +97,7 @@ button {
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
 }
-.bar .element:hover {
+.bottom-bar .element:hover {
     flex-grow: 3;
 }
 
@@ -108,40 +123,63 @@ button {
 }
 
 /* carousel */
+/* carousel items */
 .carousel-items {
+    display: flex;
     height: 50vh;
     width: 100%;
-    display: flex;
 }
 .carousel-items .element {
     flex: 1;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    min-height: 0;
+    transition: transform 0.3s ease-in-out;
 }
 .carousel-items .element .img {
     flex: 1 1 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 0;
 }
 .carousel-items .element .img img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    border-radius: 5px;
 }
 .carousel-items .element p {
     flex: 0 0 auto;
+    text-align: center;
 }
 .carousel-items .element:hover {
     transform: scale(1.1);
-    z-index: 2;
 }
+/* carousel explainers */
 .carousel-explainers .element {
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    opacity: 0.0;
+    transition: opacity 0.3s ease;
 }
 .carousel-explainers .element.active {
-    opacity: 1;
+    opacity: 1.0;
+}
+.carousel-explainers .element .page {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.carousel-explainers .element .page img {
+    max-width: 25%;
+    margin-right: 10px;
+    height: auto;
+    border-radius: 5px;
+}
+.carousel-explainers .element .page p {
+    flex-grow: 1;
+    margin: 0;
 }
