@@ -18,6 +18,7 @@
 }
 
 /* general styles */
+html { scroll-behavior: smooth; }
 body {
     margin: 0px;
     padding: 0px;
@@ -42,6 +43,14 @@ button {
 #signup:hover {
     background-color: var(--primary-color-1);
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+#home { 
+    border: 0;
+    transition: transform 0.25s ease, background-color 0.25s ease; 
+}
+#home:hover {
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
 }
 
 /* fullscreen banner on homepage */
@@ -71,16 +80,20 @@ button {
 .top-bar .left {
     flex: 1;
     display: flex;
+    text-align: left;
     justify-content: flex-start;
 }
 .top-bar .right {
     flex: 1;
     display: flex;
+    text-align: right;
     justify-content: flex-end;
 }
 .top-bar * {
     margin: 0px 5px;
+    color: white;
 }
+.top-bar a { margin: 0; } /* byproduct of literally applying margins everywhere */
 .bottom-bar {
     position: absolute;
     bottom: 0;
@@ -157,14 +170,21 @@ button {
     transform: scale(1.1);
 }
 /* carousel explainers */
+.carousel-explainers {
+    position: relative;
+}
 .carousel-explainers .element {
+    display: none;
     margin: 10px;
     border-radius: 5px;
+    position: absolute;
+    top: 0;
     background-color: whitesmoke;
     opacity: 0.0;
     transition: opacity 0.3s ease;
 }
 .carousel-explainers .element.active {
+    display: block;
     opacity: 1.0;
 }
 .carousel-explainers .element .page {
@@ -182,4 +202,9 @@ button {
 .carousel-explainers .element .page p {
     flex-grow: 1;
     margin: 0;
+}
+/* general page */
+.page {
+    margin: 10px;
+    padding: 0px 10px;
 }

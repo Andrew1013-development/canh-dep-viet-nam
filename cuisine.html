@@ -5,10 +5,28 @@
         <title>Ẩm thực</title>
         <link rel="stylesheet" href="static/style.css">
         <script src="https://kit.fontawesome.com/5a07b9e894.js" crossorigin="anonymous"></script>
+        <script src="static/script.js"></script>
     </head>
     <body>
         <div class="banner" id="cuisine">
             <h1 class="title">Ẩm thực</h1>
+            <div class="top-bar">
+                <div class="left">
+                    <button id="home" onclick="redirect('index')">
+                        <i class="fa-solid fa-house"></i>
+                    </button>
+                </div>
+                <div class="right">
+                    <button id="login" onclick="redirect('login')">Đăng nhập</button>
+                    <button id="signup" onclick="redirect('signup')">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <p>
+                Không chỉ có những món ăn ngon, phong phú, các hàng quán ở Hội An còn có cách bài trí, phục vụ mang những nét riêng. Những nhà hàng trong khu phố cổ thường treo một vài bức tranh xưa, xung quanh trang trí chậu hoa, cây cảnh hoặc đồ mỹ nghệ. Một số hàng quán còn có thêm hồ cá, hòn non bộ... tạo sự thư giãn, thoải mái cho thực khách. Tên những nhà hàng cũng mang tính truyền thống, được kế thừa từ đời này sang đời khác. Bên cạnh ẩm thực truyền thống, một số món ăn, thói quen xuất phát từ Pháp, Nhật và phương Tây vẫn được duy trì và phát triển, góp phần làm phong phú nếp ẩm thực của Hội An, phục vụ nhu cầu đa dạng của những du khách.
+            </p>
+            <h2 style="text-align: center">Dưới đây là một số món du khách ưa chuộng tại phố cổ Hội An</h2>
         </div>
         <div class="carousel-items">
             <div class="element" data-target="caolau">
@@ -35,9 +53,9 @@
                 <div class="page">
                     <img src="static/images/cuisine/cao lầu 2.jpg">
                     <p>
-                        Nhắc đến Hội An thì không thể không nhắc đến đặc sản Cao Lầu. Một món ăn gắn liền với Hội An mang cái tên rất lạ với hương vị độc đáo.<br>
-                        Nguồn gốc món ăn, cùng như cái tên Cao lầu, ngày nay rất khó xác định. Những Hoa kiều ở Hội An không công nhận đây là món ăn của họ. Một số nhà nghiên cứu Nhật Bản cho rằng cao lầu có nét giống món mỳ ở vùng Ise, nhưng trên thực tế hương vị và cách chế biến của cao lâu khác món mỳ này.<br>
-                        Cao Lầu thực chất là món mì được trộn từ bột với tro củi tràm nên sợi mì có màu vàng sáng, sợi to và mềm. Những sợi mì mềm kết hợp cùng tôm, thịt heo, xá xíu, rau sống….đã mang đến một món Cao Lầu đặc trưng chỉ có ở Hội An.<br>
+                        Nhắc đến Hội An thì không thể không nhắc đến đặc sản Cao Lầu. Một món ăn gắn liền với Hội An mang cái tên rất lạ với hương vị độc đáo.<br><br>
+                        Nguồn gốc món ăn, cùng như cái tên Cao lầu, ngày nay rất khó xác định. Những Hoa kiều ở Hội An không công nhận đây là món ăn của họ. Một số nhà nghiên cứu Nhật Bản cho rằng cao lầu có nét giống món mỳ ở vùng Ise, nhưng trên thực tế hương vị và cách chế biến của cao lâu khác món mỳ này.<br><br>
+                        Cao Lầu thực chất là món mì được trộn từ bột với tro củi tràm nên sợi mì có màu vàng sáng, sợi to và mềm. Những sợi mì mềm kết hợp cùng tôm, thịt heo, xá xíu, rau sống….đã mang đến một món Cao Lầu đặc trưng chỉ có ở Hội An.
                     </p>
                     <p style="display: none;">
                         Trước đây ở Hội An có các tiệm cao lầu ông Cảnh, Năm Cơ từng đi vào câu ca dao:<br>
@@ -50,7 +68,8 @@
                 <div class="page">
                     <img src="static/images/cuisine/mỳ quảng 2.jpg">
                     <p>
-                        Tincidunt malesuada lacus libero mus nisi. Inceptos gravida odio suspendisse vulputate varius suscipit porta. Netus egestas laoreet quis dignissim molestie quisque fringilla accumsan phasellus. Mattis himenaeos at neque. Rutrum erat integer sit inceptos cubilia augue taciti rutrum rhoncus, tellus nostra. Nascetur augue sed ullamcorper porttitor ultrices quis tellus aliquam feugiat erat. Nisi placerat congue sem venenatis porttitor. Pretium congue class curae; ad urna cum tempor bibendum, fringilla velit sollicitudin porttitor. Hac maecenas taciti semper ultrices. Parturient, mollis ut at magnis ornare volutpat pharetra. Nibh mus cum sodales amet ante rhoncus, porttitor duis. Curabitur mauris inceptos posuere odio dignissim.
+                        Đứng đầu top ẩm thực Hội An phải kể đến mì Quảng, xuất thân từ Quảng Nam. Đây là một trong những món ăn được thực khách yêu thích và được bán khắp nơi. Bát mì Quảng to đầy với những sợi mì to dai, kết hợp cùng thịt nướng, xá xíu, rau sống...giải ngay cơn đói sau cả buổi đi chơi.<br><br>
+                        Mỳ Quảng cũng như phở, bún đều được chế biến từ gạo nhưng lại có sắc thái và hương vị rất riêng biệt.
                     </p>
                 </div>
             </div>
@@ -58,7 +77,9 @@
                 <div class="page">
                     <img src="static/images/cuisine/bánh bao bánh vạc 2.jpg">
                     <p>
-                        Consequat vel parturient nunc donec luctus montes mauris. Feugiat rutrum curabitur curae; ante ipsum, eleifend conubia lobortis per rutrum mauris! Proin aenean morbi vehicula integer fames aliquet venenatis fames in duis vehicula. Primis lobortis, curae; sagittis! Quam vivamus proin taciti cras et fermentum nostra dapibus. Nunc praesent pretium augue ac. Dignissim nunc proin dictumst proin ligula!
+                        Bánh vạc Hội An không chỉ nổi tiếng trong nước mà còn được bạn bè quốc tế biết đến với tên gọi mỹ miều: “White Rose”.<br><br>
+                        Bánh bao & bánh vạc là 2 loại bánh có cách làm và nguyên liệu tương đồng nên thường được ghép thành một cặp để thưởng thức cùng nhau. Về ngoại hình, bánh bao vẫn là chiếc bánh quen thuộc với hình tròn, miệng bánh được xếp xoè ra với tạo hình như 1 bông hoa hồng đang nở rộ. Còn bánh vạc có màu sắc giống bánh bột lọc nhưng to hơn và được nặn cực kỳ khéo léo, tỉ mỉ.<br><br>
+                        Bánh bao bánh vạc Hội An là một món ăn đặc trưng Phố Hội, tuy bình dị nhưng vô cùng sang trọng. Những chiếc bánh to với lớp bột mỏng cùng phần nhân đậm đà, khi ăn chấm cùng nước chấm ngon mê ly. Chỉ cần ăn một lần đảm bảo bạn sẽ nhớ mãi không quên.
                     </p>
                 </div>
             </div>
