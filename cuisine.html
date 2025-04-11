@@ -12,16 +12,22 @@
             <h1 class="title">Ẩm thực</h1>
         </div>
         <div class="carousel-items">
-            <div class="element" id="caolau">
-                <img src="static/images/cuisine/cao lầu.jpg">
+            <div class="element" data-target="caolau">
+                <div class="img">
+                    <img src="static/images/cuisine/cao lầu.jpg">
+                </div>
                 <p>Cao lầu</p>
             </div>
-            <div class="element" id="myquang">
-                <img src="static/images/cuisine/mỳ quảng.webp">
+            <div class="element" data-target="myquang">
+                <div class="img">
+                    <img src="static/images/cuisine/mỳ quảng.webp">
+                </div>
                 <p>Mỳ quảng</p>
             </div>
-            <div class="element" id="banhbaobanhvac">
-                <img src="static/images/cuisine/bánh bao bánh vạc.jpg">
+            <div class="element" data-target="banhbaobanhvac">
+                <div class="img">
+                    <img src="static/images/cuisine/bánh bao bánh vạc.jpg">
+                </div>
                 <p>Bánh bao, bánh vạc</p>
             </div>
         </div>
@@ -38,14 +44,15 @@
         </div>
         <script>
             const items = document.querySelectorAll(".carousel-items .element");
-            let active_id = null;
+            let active_explainer = document.querySelector(".carousel-explainers .element.active");
 
             items.forEach(item => {
                 item.addEventListener("click", () => {
-                    target_id = item.id;
-                    if (active_id != null) document.querySelector(`.carousel-explainers #${active_id}`).classList.remove("active");
-                    document.querySelector(`.carousel-explainers #${target_id}`).classList.add("active");
-                    active_id = target_id;
+                    const target_explainer = document.getElementById(item.getAttribute("data-target"));        
+                    if (active_explainer == target_explainer) return;
+                    if (active_explainer != null) active_explainer.classList.remove("active");
+                    target_explainer.classList.add("active");
+                    active_explainer = target_explainer;
                 });
             });
         </script>
