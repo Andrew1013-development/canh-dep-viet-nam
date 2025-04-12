@@ -1,131 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>[PLACEHOLDER] Đăng nhập</title>
-  <style>
-    /* Reset & base */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: #f6f8fa;
-      color: #24292e;
-      line-height: 1.5;
-      display: flex;
-      min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-    }
-    a { color: #0366d6; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Container */
-    .auth-container {
-      background: #fff;
-      border: 1px solid #e1e4e8;
-      border-radius: 6px;
-      box-shadow: 0 1px 3px rgba(27,31,35,.15);
-      width: 100%;
-      max-width: 400px;
-      padding: 32px;
-    }
-
-    /* Logo */
-    .auth-logo {
-      display: block;
-      margin: 0 auto 24px;
-      width: 50px;
-      height: 50px;
-      background: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png') no-repeat center/contain;
-    }
-
-    /* Form titles */
-    .auth-container h1 {
-      font-size: 24px;
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 24px;
-    }
-
-    /* Form fields */
-    .auth-form {
-      display: none;
-    }
-    .auth-form.active {
-      display: block;
-    }
-    .form-group {
-      margin-bottom: 16px;
-    }
-    .form-group label {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 4px;
-    }
-    .form-group input {
-      width: 100%;
-      padding: 8px 12px;
-      border: 1px solid #d1d5da;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    .form-group input:focus {
-      outline: none;
-      border-color: #0366d6;
-      box-shadow: 0 0 0 3px rgba(3,102,214,.3);
-    }
-
-    /* Button */
-    .btn {
-      width: 100%;
-      padding: 8px 0;
-      background: #2ea44f;
-      border: 1px solid rgba(27,31,35,.15);
-      border-radius: 6px;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background: #2c974b;
-    }
-
-    /* Footer links */
-    .auth-footer {
-      text-align: center;
-      font-size: 14px;
-      margin-top: 16px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="auth-container">
-    <!-- Login Form -->
-    <form id="loginForm" class="auth-form active">
-      <h1>Sign in</h1>  <!-- :contentReference[oaicite:0]{index=0} -->
-      <div class="form-group">
-        <label for="login-username">Username or email address</label>
-        <input type="text" id="login-username" required>
-      </div>
-      <div class="form-group">
-        <label for="login-password">Password</label>
-        <input type="password" id="login-password" required>
-      </div>
-      <button type="submit" class="btn">Sign in</button>
-      <div class="auth-footer">
-        <a href="#">Forgot password?</a><br>
-        <a href="signup.html" id="showSignup">Create an account</a>
-      </div>
-    </form>
-  <script>
-    // Basic form handlers (stub)
-    loginForm.addEventListener('submit', e => {
-      e.preventDefault();
-      alert('Logging in as ' + document.getElementById('login-username').value);
-    });
-  </script>
-</body>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Đăng ký tài khoản</title>
+        <link rel="stylesheet" href="static/style.css">
+        <script src="https://kit.fontawesome.com/5a07b9e894.js" crossorigin="anonymous"></script>
+        <script src="static/script.js"></script>
+    </head>
+    <body>
+        <form method="post">
+            <label>Tên tài khoản</label>
+            <input type="text">
+            <label>Mật khẩu</label>
+            <input type="password">
+        </form>
+    </body>
 </html>

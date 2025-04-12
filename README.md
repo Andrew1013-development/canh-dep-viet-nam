@@ -1,12 +1,16 @@
 # canh-dep-viet-nam
-Bài thực hành Tin học 12 - Một trang web về một cảnh đẹp ở Việt Nam
 
-## Lựa chọn nội dung
-Phố cố Hội An
-## Thành viên nhóm
-- Trần Việt Huy
-- Bùi Lê Trí Long
-- Lâm Gia Lạc
-- Nguyễn Hồng Hiệp
-- Nguyễn Long Quân
-- Huỳnh Kim Yến
+## Giới thiệu
+Bài thực hành Tin học 12 - Một trang web về một danh lam thắng cảnh ở Việt Nam
+Nhóm thực hiện: Nhóm 7 - 12A3
+Chủ đề: Phố cổ Hội An
+## Thành viên Nhóm 7
+| Tên thành viên | Phân công |
+| ---- | --- |
+| Trần Việt Huy  | Lập trình |
+| Nguyễn Long Quân  | Thiết kế |
+| Bùi Lê Trí Long  | Nội dung |
+| Huỳnh Kim Yến  | UI Tester |
+| Nguyễn Hồng Hiệp  | UX Tester |
+| Huỳnh Ngọc Hiếu  | Tester |
+## Thông tin thêm
