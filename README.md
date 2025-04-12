@@ -2,6 +2,7 @@
 Bài thực hành Tin học 12 - Một trang web về một cảnh đẹp ở Việt Nam
 
 ## Lựa chọn nội dung
+Phố cố Hội An
 ## Thành viên nhóm
 - Trần Việt Huy
 - Bùi Lê Trí Long
