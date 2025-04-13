@@ -14,6 +14,7 @@ Phố cổ Hội An
 | Bùi Lê Trí Long  | Nội dung |
 | Huỳnh Kim Yến  | UI Tester |
 | Nguyễn Hồng Hiệp  | UX Tester |
-| Huỳnh Ngọc Hiếu  | Tester |
+| Lâm Gia Lạc | UX Tester |
+| Huỳnh Ngọc Hiếu  | UX Tester |
 ## Thông tin thêm
 Không có thông tin thêm
