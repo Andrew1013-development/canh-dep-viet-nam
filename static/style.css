@@ -69,7 +69,48 @@ button {
 .page ul {
     padding: 0 1rem;
 }
-
+.page .group {
+    display: flex;
+    position: relative;
+    gap: 10px;
+}
+.page .group .element {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.page .group .element .img {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page .group .element .img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+.page .group .element p {
+    flex: 0 0 auto;
+    text-align: center;
+}
+.page .dual-group {
+    display: flex;
+    gap: 10px;
+}
+.page .dual-group .left h3:first-child {
+    margin-top: 0; /* i guess shit works */
+}
+.page .dual-group .right {
+    max-width: 50%;
+}
+.page .dual-group .right img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
 /* ===== CUSTOM ELEMENTS ===== */
 /* intro / fullscreen banner */
 .intro {
