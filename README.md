@@ -1,5 +1,5 @@
 # canh-dep-viet-nam
-
+_Note: as of April 14th, 2025, this project is considered obsolete (the submission deadline has since been bypassed)_
 ## Giới thiệu
 Bài thực hành Tin học 12 - Một trang web về một danh lam thắng cảnh ở Việt Nam
 
@@ -16,3 +16,4 @@ Phố cổ Hội An
 | Nguyễn Hồng Hiệp  | UX Tester |
 | Huỳnh Ngọc Hiếu  | Tester |
 ## Thông tin thêm
+Không có thông tin thêm
