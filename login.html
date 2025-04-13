@@ -1,19 +1,119 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Đăng ký tài khoản</title>
-        <link rel="stylesheet" href="static/style.css">
-        <script src="https://kit.fontawesome.com/5a07b9e894.js" crossorigin="anonymous"></script>
-        <script src="static/script.js"></script>
-    </head>
-    <body>
-        <form method="post">
-            <label>Tên tài khoản</label>
-            <input type="text">
-            <label>Mật khẩu</label>
-            <input type="password">
-            <input type="submit" value="Đăng nhập">
-        </form>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <script src="https://kit.fontawesome.com/5a07b9e894.js" crossorigin="anonymous"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(rgb(0,0,0,0.35),rgb(0,0,0,0.35)), url("static/images/intro.webp");
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 2rem;
+      width: 320px;
+      color: #fff;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    .card h2 {
+      margin-bottom: 1.5rem;
+    }
+    .input-group {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    .input-group i {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      color: #fff;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 0.75rem 1rem 0.75rem 2.5rem;
+      border: none;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+    }
+    .input-group input::placeholder {
+      color: #ddd;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    .actions label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .actions input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+    .actions a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .btn {
+      width: 100%;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 6px;
+      background: #fff;
+      color: #333;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .footer {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Đăng nhập</h2>
+    <form>
+      <div class="input-group">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Username" required>
+      </div>
+      <div class="input-group">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+      </div>
+      <div class="actions">
+        <label><input type="checkbox">Nhớ tôi</label>
+        <a href="#">Quên tài khoản?</a>
+      </div>
+      <button class="btn" type="submit">Login</button>
+    </form>
+    <div class="footer">
+      Bạn chưa có tài khoản? <a href="signup.html">Đăng ký</a><br>
+      <a href="index.html">Về trang chủ</a>
+    </div>
+  </div>
+</body>
 </html>
